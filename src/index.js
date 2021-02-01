@@ -1,1 +1,32 @@
+import movieGenres from './config.js'
 
+let imgBaseUrl = 'https://image.tmdb.org/t/p/w200';
+let imgSrc = '';
+
+const getPoster = () => {
+  return fetch(movieGenres.actionNfx)
+    .then(response => response.json())
+    .then(json => json.results[0].poster_path);
+}
+
+getPoster().then(posterPath => {
+  imgSrc = imgBaseUrl + posterPath;
+  document.getElementById('root').innerHTML = `
+  <img src='${imgSrc}'>
+  `;
+  console.log(imgSrc);
+})
+
+function showingCards(pokemonGo) {
+  cards.innerHTML = '';
+  for (let pokemon of pokemonGo) {
+
+    let dados = document.createElement('div')
+    dados.className = 'div-filha';
+
+    dados.innerHTML += `
+`
+    cards.appendChild(dados);
+  }
+}
+showingCards(pokemonGo);
