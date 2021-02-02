@@ -12,7 +12,6 @@ const getPoster = (array) => {
 
 function showMovieInfo(array) {
   getPoster(array).then(moviesList => {
-    console.log(moviesList);
     for (let movie of moviesList) {
       console.log(movie.poster_path);
       imgSrc = imgBaseUrl + movie.poster_path;
@@ -24,7 +23,7 @@ function showMovieInfo(array) {
               <img src="${imgSrc}">
             </div>
             <div class="poster-back">
-              <p>${movie.title}</p>
+              <p class="titulo">${movie.title}</p>
               <p>${movie.overview}</p>
             </div>
           </div>
@@ -38,6 +37,7 @@ function showMovieInfo(array) {
 const filterAction = document.getElementById("acao");
 filterAction.addEventListener("click", () => {
   showMovieInfo(movieGenres.actionNfx);
+  console.log()
   showMovieInfo(movieGenres.actionAmz);
 })
 
@@ -57,6 +57,12 @@ const filterComedy = document.getElementById("comedy");
 filterComedy.addEventListener("click", () => {
   showMovieInfo(movieGenres.comedyNfx);
   showMovieInfo(movieGenres.comedyAmz);
+})
+
+const filterCrime = document.getElementById("crime");
+filterCrime.addEventListener("click", () => {
+  showMovieInfo(movieGenres.crimeNfx);
+  showMovieInfo(movieGenres.crimeAmz);
 })
 
 const filterDocumentary = document.getElementById("documentary");

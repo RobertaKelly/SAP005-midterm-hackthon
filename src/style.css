@@ -178,12 +178,17 @@ p{
 	background: white;
 	height: 300px;
 }
-  
+
 .poster-back {
 	transform: rotateY(180deg);
-	background: blueviolet;
+	background: rgb(89, 62, 211);
 	height: 300px;
 	overflow-y: auto;
+}
+
+.titulo{
+  font-weight: bolder;
+  color: #000000;
 }
 
 
