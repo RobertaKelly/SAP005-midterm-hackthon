@@ -203,6 +203,16 @@ p, h3 {
   border: 0px;
   outline: 0;
   color: white;
+  font-size: 20px;
+}
+.resultado {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to right, #3399ff, #2d5aa8);
+  height: 40%;
+  border-radius: 30px;
+  margin-top: 20px;
+
 }
 
 @media (min-width:880px) and (max-width:2000px) {
