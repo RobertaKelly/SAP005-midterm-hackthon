@@ -74,14 +74,13 @@ const carrossel = {
               <img src="https://image.tmdb.org/t/p/w200/${filme.poster_path} ">
             </div>
             <div class="poster-back">
-              <h3>${filme.title}</h3>
+              <h3>${filme.title}</h3><br>
               <p>Sinopse: ${filme.overview}</p>
             </div>
           </div>
         </div>
     `
-   }
+	}
 };
 
-
-  export default carrossel;
+export default carrossel;
