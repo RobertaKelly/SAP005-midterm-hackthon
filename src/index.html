@@ -8,7 +8,6 @@
     <meta name="description" content="******Escrever algo sobre nossa aplicaçao">
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="img/favicon.ico" />
-
     <title>SortCine</title>
 </head>
 
@@ -18,14 +17,6 @@
     </header>
 
     <main>
-        <!--
-    <select name="" id="generos">
-      <option class="s" disabled selected value="">Filter by gender:</option>
-      <option class="" value="normal">Ex1</option>
-    </select>
-    -->
-        <button id="test-btn">TESTAR!</button>
-
         <div class="peliculas-recomendadas contenedor">
             <div class="contenedor-titulo-controles">
                 <h3>Gêneros de Filmes</h3>
@@ -38,43 +29,55 @@
                 <div class="contenedor-carousel">
                     <div class="carousel">
                         <div class="pelicula">
-                            <a href="#"><img src="img/ação.png" alt=""></a>
+                            <a href="#"><img src="img/ação.png" id="action" alt=""></a>
                         </div>
                         <div class="pelicula">
-                            <a href="#"><img src="img/animação.png" alt=""></a>
+                            <a href="#"><img src="img/aventura.png" id="adventure" alt=""></a>
                         </div>
                         <div class="pelicula">
-                            <a href="#"><img src="img/aventura.png" alt=""></a>
+                            <a href="#"><img src="img/animação.png" id="animation" alt=""></a>
                         </div>
                         <div class="pelicula">
-                            <a href="#"><img src="img/comédia.png" alt=""></a>
+                            <a href="#"><img src="img/comédia.png" id="comedy" alt=""></a>
                         </div>
                         <div class="pelicula">
-                            <a href="#"><img src="img/crime.png" alt=""></a>
+                            <a href="#"><img src="img/crime.png" id="crime" alt=""></a>
                         </div>
                         <div class="pelicula">
-                            <a href="#"><img src="img/documentário.png" alt=""></a>
+                            <a href="#"><img src="img/documentário.png" id="documentary" alt=""></a>
                         </div>
                         <div class="pelicula">
-                            <a href="#"><img src="img/drama.png" alt=""></a>
+                            <a href="#"><img src="img/drama.png" id="drama" alt=""></a>
                         </div>
                         <div class="pelicula">
-                            <a href="#"><img src="img/família.png" alt=""></a>
+                            <a href="#"><img src="img/família.png" id="family" alt=""></a>
                         </div>
                         <div class="pelicula">
-                            <a href="#"><img src="img/fantasia.png" alt=""></a>
+                            <a href="#"><img src="img/fantasia.png" id="fantasy" alt=""></a>
                         </div>
                         <div class="pelicula">
-                            <a href="#"><img src="img/faroeste.png" alt=""></a>
+                            <a href="#"><img src="img/história.png" id="history" alt=""></a>
                         </div>
                         <div class="pelicula">
-                            <a href="#"><img src="img/ficção-cientifica.png" alt=""></a>
+                            <a href="#"><img src="img/terror.png" id="horror" alt=""></a>
                         </div>
                         <div class="pelicula">
-                            <a href="#"><img src="img/história.png" alt=""></a>
+                            <a href="#"><img src="img/musical.png" id="music" alt=""></a>
                         </div>
                         <div class="pelicula">
-                            <a href="#"><img src="img/mistério.png" alt=""></a>
+                            <a href="#"><img src="img/mistério.png" id="mystery" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/romance.png" id="romance" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/ficção-cientifica.png" id="scifi" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/suspense.png" id="thriller" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/faroeste.png" id="western" alt=""></a>
                         </div>
 
                     </div>
@@ -86,7 +89,14 @@
 
     </main>
 
-    <div id="root"></div>
+    <div id="result-div">
+        <button type="button" class="buttonSorteio" id="btnSorteio">Sorteio</button>
+        <h3 id="resultado"></h3>
+    </div>
+
+    <div id="root">
+
+    </div>
 
     <footer id="footer">
         <p>Projeto feito na <a target="_blank" href="https://www.laboratoria.la/br">Laboratoria</a>

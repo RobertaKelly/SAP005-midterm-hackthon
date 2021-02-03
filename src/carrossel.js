@@ -1,6 +1,5 @@
 const fila = document.querySelector('.contenedor-carousel');
 const peliculas = document.querySelectorAll('.pelicula');
-
 const flechaIzquierda = document.getElementById('flecha-izquierda');
 const flechaDerecha = document.getElementById('flecha-derecha');
 
@@ -58,3 +57,32 @@ peliculas.forEach((pelicula) => {
 fila.addEventListener('mouseleave', () => {
 	peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
 });
+
+const carrossel = {
+
+	/*Sorteio*/
+	funcaoSorteio: function (h3, filmes) {
+		//return document.getElementById("resultado").innerHTML
+		//=
+		const num = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
+		const filme = filmes[num];
+		console.log(filme)
+		h3.innerHTML =
+		`
+		<div class="poster">
+          <div class="poster-container">
+            <div class="poster-front">
+              <img src="https://image.tmdb.org/t/p/w200/${filme.poster_path} ">
+            </div>
+            <div class="poster-back">
+              <h3>${filme.title}</h3>
+              <p>Sinopse: ${filme.overview}</p>
+            </div>
+          </div>
+        </div>
+    `
+   }
+};
+
+
+  export default carrossel;
