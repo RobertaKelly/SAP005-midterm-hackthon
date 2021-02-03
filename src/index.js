@@ -14,7 +14,8 @@ const getPoster = (url) => {
 
 function showMovieInfo(url) {
   getPoster(url).then(moviesList => {
-
+    let sortTest = moviesList[Math.floor(Math.random() * moviesList.length)];
+    console.log(sortTest);
     for (let movie of moviesList) {
       imgSrc = imgBaseUrl + movie.poster_path;
       posters += `
