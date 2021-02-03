@@ -9,7 +9,6 @@ let imgSrc = "";
 let posters = "";
 let filmes;
 
-
 const getPoster = (url) => {
   return fetch(url)
     .then(response => response.json())

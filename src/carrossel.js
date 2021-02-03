@@ -64,9 +64,8 @@ const carrossel = {
 	funcaoSorteio: function (h3, filmes) {
 		//return document.getElementById("resultado").innerHTML
 		//=
-		const num = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
-		const filme = filmes[num];
-		console.log(filme)
+		let num = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
+		let filme = filmes[num];
 		h3.innerHTML =
 		`
 		<div class="poster">
