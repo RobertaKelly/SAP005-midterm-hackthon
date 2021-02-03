@@ -1,8 +1,8 @@
 import carrossel from "./carrossel.js";
 import movieGenres from "./genres.js"
 
-const resultDiv = document.getElementById("result-div")
-resultDiv.style.display = "none";
+const sorteioDiv = document.getElementById("sorteio-div")
+sorteioDiv.style.display = "none";
 
 let imgBaseUrl = "https://image.tmdb.org/t/p/w200";
 let imgSrc = "";
@@ -16,7 +16,7 @@ const getPoster = (url) => {
 }
 
 function showMovieInfo(url) {
-  resultDiv.style.display = "block";
+  sorteioDiv.style.display = "block";
   getPoster(url).then(moviesList => {
     console.log(moviesList);
     filmes = moviesList
@@ -31,7 +31,7 @@ function showMovieInfo(url) {
               <img src="${imgSrc}">
             </div>
             <div class="poster-back">
-              <h3>${movie.title}</h3>
+              <h3>${movie.title}</h3><br>
               <p>Sinopse: ${movie.overview}</p>
             </div>
           </div>
@@ -164,12 +164,10 @@ filterWestern.addEventListener("click", () => {
 
 
 function sorteio() {
-
-  const btn = document.querySelector("#btnSorteio")
+  const btn = document.querySelector("#btnSorteio");
   btn.addEventListener("click", () => {
     //console.log(filmes)
     const h3 = document.querySelector("#resultado");
-
-    carrossel.funcaoSorteio(h3, filmes)
+    carrossel.funcaoSorteio(h3, filmes);
   })
 }
