@@ -9,8 +9,6 @@ class="buttonSorteio" id="btnSorteio">Sorteio</button>
 let filmes;
 
 
-
-
 const getPoster = (url) => {
   return fetch(url)
     .then(response => response.json())
@@ -19,13 +17,12 @@ const getPoster = (url) => {
 
 function showMovieInfo(url) {
   getPoster(url).then(moviesList => {
-    //console.log(moviesList);
-
+    console.log(moviesList);
     filmes = moviesList
     for (let movie of moviesList) {
       // console.log(movie.poster_path);
       imgSrc = imgBaseUrl + movie.poster_path;
-      //console.log(imgSrc);
+      // console.log(imgSrc);
       posters += `
         <div class="poster">
           <div class="poster-container">
@@ -45,17 +42,10 @@ function showMovieInfo(url) {
   })
 }
 
-const filterAction = document.getElementById("acao");
+const filterAction = document.getElementById("action");
 filterAction.addEventListener("click", () => {
   showMovieInfo(movieGenres.actionNfx);
-  console.log()
   showMovieInfo(movieGenres.actionAmz);
-})
-
-const filterAnimation = document.getElementById("animation");
-filterAnimation.addEventListener("click", () => {
-  showMovieInfo(movieGenres.animationNfx);
-  showMovieInfo(movieGenres.animationAmz);
 })
 
 const filterAdventure = document.getElementById("adventure");
@@ -64,10 +54,22 @@ filterAdventure.addEventListener("click", () => {
   showMovieInfo(movieGenres.adventureAmz);
 })
 
+const filterAnimation = document.getElementById("animation");
+filterAnimation.addEventListener("click", () => {
+  showMovieInfo(movieGenres.animationNfx);
+  showMovieInfo(movieGenres.animationAmz);
+})
+
 const filterComedy = document.getElementById("comedy");
 filterComedy.addEventListener("click", () => {
   showMovieInfo(movieGenres.comedyNfx);
   showMovieInfo(movieGenres.comedyAmz);
+})
+
+const filterCrime = document.getElementById("crime");
+filterCrime.addEventListener("click", () => {
+  showMovieInfo(movieGenres.crimeNfx);
+  showMovieInfo(movieGenres.crimeAmz);
 })
 
 const filterDocumentary = document.getElementById("documentary");
@@ -94,10 +96,40 @@ filterFantasy.addEventListener("click", () => {
   showMovieInfo(movieGenres.fantasyAmz);
 })
 
-const filterWester = document.getElementById("wester");
-filterWester.addEventListener("click", () => {
-  showMovieInfo(movieGenres.westernNfx);
-  showMovieInfo(movieGenres.westerAmz);
+const filterHistory = document.getElementById("history");
+filterHistory.addEventListener("click", () => {
+  showMovieInfo(movieGenres.historyNfx);
+  showMovieInfo(movieGenres.historyAmz);
+})
+
+const filterHorror = document.getElementById("horror");
+filterHorror.addEventListener("click", () => {
+  showMovieInfo(movieGenres.horrorNfx);
+  showMovieInfo(movieGenres.horrorAmz);
+})
+
+const filterMusic = document.getElementById("music");
+filterMusic.addEventListener("click", () => {
+  showMovieInfo(movieGenres.musicNfx);
+  showMovieInfo(movieGenres.musicAmz);
+})
+
+const filterMystery = document.getElementById("mystery");
+filterMystery.addEventListener("click", () => {
+  showMovieInfo(movieGenres.mysteryNfx);
+  showMovieInfo(movieGenres.mysteryAmz);
+})
+
+const filterRomance = document.getElementById("romance");
+filterRomance.addEventListener("click", () => {
+  showMovieInfo(movieGenres.romanceNfx);
+  showMovieInfo(movieGenres.romanceAmz);
+})
+
+const filterThriller = document.getElementById("thriller");
+filterThriller.addEventListener("click", () => {
+  showMovieInfo(movieGenres.thrillerNfx);
+  showMovieInfo(movieGenres.thrillerAmz);
 })
 
 const filterScifi = document.getElementById("scifi");
@@ -106,16 +138,10 @@ filterScifi.addEventListener("click", () => {
   showMovieInfo(movieGenres.scifiAmz);
 })
 
-const filterHistory = document.getElementById("history");
-filterHistory.addEventListener("click", () => {
-  showMovieInfo(movieGenres.historyNfx);
-  showMovieInfo(movieGenres.historyAmz);
-})
-
-const filterMystery = document.getElementById("mystery");
-filterMystery.addEventListener("click", () => {
-  showMovieInfo(movieGenres.mysteryNfx);
-  showMovieInfo(movieGenres.mysteryAmz);
+const filterWestern = document.getElementById("western");
+filterWestern.addEventListener("click", () => {
+  showMovieInfo(movieGenres.westernNfx);
+  showMovieInfo(movieGenres.westernAmz);
 })
 
 
@@ -129,4 +155,3 @@ function sorteio() {
     carrossel.funcaoSorteio(h3, filmes)
   })
 }
-
