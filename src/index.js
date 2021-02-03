@@ -127,7 +127,6 @@ function sorteio() {
     const h3 = document.querySelector("#resultado");
 
     carrossel.funcaoSorteio(h3, filmes)
-
   })
 }
 
