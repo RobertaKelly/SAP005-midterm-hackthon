@@ -180,6 +180,7 @@ p, h3 {
   position: absolute;
   width: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   z-index: 1;
 }
 
