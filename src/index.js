@@ -3,8 +3,8 @@ import movieGenres from "./genres.js"
 
 let imgBaseUrl = "https://image.tmdb.org/t/p/w200";
 let imgSrc = "";
-let posters = ` <button "type="button" 
-class="buttonSorteio" id="btnSorteio">Sorteio</button> 
+let posters = ` <button "type="button"
+class="buttonSorteio" id="btnSorteio">Sorteio</button>
 <h3 id="resultado"></h3>`;
 let filmes;
 
@@ -26,7 +26,7 @@ function showMovieInfo(url) {
       // console.log(movie.poster_path);
       imgSrc = imgBaseUrl + movie.poster_path;
       //console.log(imgSrc);
-      posters += ` 
+      posters += `
         <div class="poster">
           <div class="poster-container">
             <div class="poster-front">
@@ -48,6 +48,7 @@ function showMovieInfo(url) {
 const filterAction = document.getElementById("acao");
 filterAction.addEventListener("click", () => {
   showMovieInfo(movieGenres.actionNfx);
+  console.log()
   showMovieInfo(movieGenres.actionAmz);
 })
 
@@ -126,7 +127,6 @@ function sorteio() {
     const h3 = document.querySelector("#resultado");
 
     carrossel.funcaoSorteio(h3, filmes)
-    
   })
 }
 
