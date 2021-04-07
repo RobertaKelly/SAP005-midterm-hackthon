@@ -78,7 +78,7 @@ E finalmente chegamos a cara de nossa aplicação:
 
 ---
  
-###Desenvolvedoras:
+### Desenvolvedoras:
 
 **Essa aplicação foi desenvolvida por:**
 - [Elis Brasil](https://github.com/Elis-ctrl)
